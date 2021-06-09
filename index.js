@@ -80,7 +80,7 @@ const originalFlavors = [
 ];
 
 function copy(originalFlavors) {
-  return (copy = originalFlavors.slice());
+  return (copy = [...originalFlavors]);
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -93,8 +93,10 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-function is31Flavors(/*your code here*/) {
-  /*your code here*/
+function is31Flavors(originalFlavors) {
+  if (originalFlavors.length === 31) {
+    return true;
+  }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -109,9 +111,11 @@ Use the addFlavor function below to do the following:
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(/*your code here*/) {
-  /*your code here*/
-}
+function addFlavor(array, string) {}
+
+console.log(originalFlavors);
+
+//   }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -182,8 +186,14 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/) {
-  /*your code here*/
+function filterByWord(array, string) {
+  const filteredFlavors = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(string)) {
+      filteredFlavors.push(array[i]);
+    }
+  }
+  return filteredFlavors;
 }
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
